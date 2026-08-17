@@ -28,6 +28,15 @@
   document.getElementById("proj-index").textContent = project.index || "";
   document.getElementById("proj-title").textContent = project.title;
 
+  // If the project has an `embed` field (Slides, YouTube, Figma, etc.),
+  // it replaces the main placeholder block entirely.
+  const mediaMain = document.getElementById("proj-media-main");
+  if (project.embed) {
+    mediaMain.classList.remove("placeholder-media");
+    mediaMain.classList.add("has-embed");
+    mediaMain.innerHTML = project.embed;
+  }
+
   const meta = document.getElementById("proj-meta");
   (project.tags || []).forEach((t) => {
     const span = document.createElement("span");
@@ -53,25 +62,40 @@
     moreEl.remove();
   }
 
-  // Two generic gallery placeholders. Not tied to project data —
-  // just consistent visual filler until real images are dropped in.
+  // Bottom gallery blocks. If the project has a `gallery` array in
+  // content.js, real images render there. Otherwise, generic
+  // placeholders show instead — nothing breaks either way.
   const gallery = document.getElementById("proj-gallery");
-  const galleryItems = [
-    { kind: "image", label: "Image placeholder" },
-    { kind: "embed", label: "Embed placeholder — video, prototype, or live demo" },
-  ];
-  galleryItems.forEach((g) => {
-    const item = document.createElement("div");
-    item.className = "gallery-item";
-    item.innerHTML = `
-      <div class="placeholder-media ${g.kind === "embed" ? "is-embed" : ""}">
-        <span class="ph-icon">${g.kind === "embed" ? "▶" : "▢"}</span>
-        <span class="ph-label">${g.label}</span>
-      </div>
-      <span class="g-caption">${project.title} — ${g.kind}</span>
-    `;
-    gallery.appendChild(item);
-  });
+  if (project.gallery && project.gallery.length) {
+    project.gallery.forEach((g) => {
+      const item = document.createElement("div");
+      item.className = "gallery-item";
+      item.innerHTML = `
+        <div class="gallery-media">
+          <img src="${g.image}" alt="${g.caption || project.title}" />
+        </div>
+        <span class="g-caption">${g.caption || ""}</span>
+      `;
+      gallery.appendChild(item);
+    });
+  } else {
+    const galleryItems = [
+      { kind: "image", label: "Image placeholder" },
+      { kind: "embed", label: "Embed placeholder — video, prototype, or live demo" },
+    ];
+    galleryItems.forEach((g) => {
+      const item = document.createElement("div");
+      item.className = "gallery-item";
+      item.innerHTML = `
+        <div class="placeholder-media ${g.kind === "embed" ? "is-embed" : ""}">
+          <span class="ph-icon">${g.kind === "embed" ? "▶" : "▢"}</span>
+          <span class="ph-label">${g.label}</span>
+        </div>
+        <span class="g-caption">${project.title} — ${g.kind}</span>
+      `;
+      gallery.appendChild(item);
+    });
+  }
 
   // Prev / next pager, wraps around the projects array.
   const pager = document.getElementById("proj-pager");

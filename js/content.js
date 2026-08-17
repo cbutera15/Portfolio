@@ -41,6 +41,11 @@ const SITE = {
         "The brief started with a specific problem: the design and engineering teams had different mental models for motion, so every animated interaction shipped slightly differently. Kinetic became the shared reference for both sides.",
         "I built the components in code first, documented timing curves and usage rules, then worked backward into Figma so designers could prototype with the same values engineers would ship with.",
       ],
+      embed: '<iframe src=\"https://docs.google.com/presentation/d/e/2PACX-1vTpfACeFX8IrDjWa3YOALFS8X9MWmHgaon0yLPhYv-bOF5tPOK6VfnEE_2txlTn88wBTIXtYG9GRiHJ/pubembed?start=true&loop=true&delayms=5000\" frameborder=\"0\" width=\"960\" height=\"569\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>',
+      gallery: [
+        { image: "assets/images/proj1/n8n-scraper.png", caption: "n8n web scraper - gathers and categorizes UVM Knowledge Base articles for use with a RAG chatbot." },
+        { image: "assets/images/proj1/n8n-plaid.png", caption: "n8n plaid integration - gathers and categorizes user transactions automatically." },
+      ],
     },
     {
       index: "02",
