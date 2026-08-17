@@ -37,6 +37,10 @@ const SITE = {
           "tedious, or challenging.",
       tags: ["AI Automation", "n8n", "2025"],
       href: "#",
+      details: [
+        "The brief started with a specific problem: the design and engineering teams had different mental models for motion, so every animated interaction shipped slightly differently. Kinetic became the shared reference for both sides.",
+        "I built the components in code first, documented timing curves and usage rules, then worked backward into Figma so designers could prototype with the same values engineers would ship with.",
+      ],
     },
     {
       index: "02",

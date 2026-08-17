@@ -9,9 +9,9 @@
 
   // Projects
   const list = document.getElementById("project-list");
-  SITE.projects.forEach((p) => {
+  SITE.projects.forEach((p, i) => {
     const row = document.createElement("a");
-    row.href = p.href;
+    row.href = `project.html?p=${i}`;
     row.className = "project-row reveal";
     row.innerHTML = `
       <span class="row-index">${p.index}</span>

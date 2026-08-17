@@ -45,14 +45,16 @@
     <section class="proj-media-wrap">
         <div class="placeholder-media proj-media-main" id="proj-media-main">
             <span class="ph-icon">▢</span>
-            <span class="ph-label">Image placeholder — set <code>image</code> in content.js</span>
+            <span class="ph-label">Image placeholder — drop a screenshot into <code>assets/</code> and swap this block for an <code>&lt;img&gt;</code></span>
         </div>
     </section>
 
     <section class="proj-body">
         <p class="proj-description" id="proj-description"></p>
-        <div class="proj-links" id="proj-links"></div>
     </section>
+
+    <!-- Only rendered if the project has a `details` field in content.js -->
+    <section class="proj-more" id="proj-more"></section>
 
     <section class="proj-gallery" id="proj-gallery"><!-- injected --></section>
 
