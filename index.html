@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Colin Butera — Design & Code</title>
+<meta name="description" content="Portfolio of Colin Butera — design and front-end engineering." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top">CB<span class="dot">.</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#video">Video</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <h1 class="hero-name">
+          <span class="line">Colin</span>
+          <span class="line">Butera<span class="accent-dot">.</span></span>
+        </h1>
+
+        <div class="terminal" role="group" aria-label="Introduction">
+          <div class="terminal-bar">
+            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+            <span class="terminal-title">~/colin</span>
+          </div>
+          <div class="terminal-body" id="terminal-body" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <span class="tag">Design &amp; Code</span>
+        <span class="tag muted" id="hero-location"></span>
+        <span class="scroll-cue">Scroll<span class="arrow">↓</span></span>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section work">
+      <div class="section-head">
+        <h2>Selected&nbsp;work</h2>
+        <p class="section-note">Design and code, made by the same hands.</p>
+      </div>
+
+      <div class="project-list" id="project-list"><!-- injected --></div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="section video">
+      <div class="section-head small">
+        <h3>Video</h3>
+        <p class="section-note">DaVinci work, on the side.</p>
+      </div>
+      <div class="video-list" id="video-list"><!-- injected --></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <p class="about-text" id="about-text"></p>
+      <img src="assets/images/colin_butera.png" alt="colin butera profile picture" class="about-picture">
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2 class="contact-headline">Let's build<br /><span style="color: var(--accent);">something</span><span style="color: var(--accent-lime)">.</span></h2>
+      <div class="contact-row">
+        <a class="contact-email" id="contact-email" href="#"></a>
+        <div class="socials" id="socials"><!-- injected --></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span id="footer-name"></span>
+    <span class="footer-meta">Built with HTML, CSS &amp; a little JS · <span id="footer-year"></span></span>
+  </footer>
+
+  <script src="js/content.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

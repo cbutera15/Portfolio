@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project — Miles Okafor</title>
+    <meta name="description" content="Project detail." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/project.css" />
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+    <a class="wordmark" href="index.html">MO<span class="dot">.</span></a>
+    <nav class="nav" aria-label="Primary">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#video">Video</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+    </button>
+</header>
+
+<main id="project-main">
+    <!-- Everything below is injected by js/project.js based on ?slug= -->
+
+    <section class="proj-hero">
+        <a class="back-link" href="index.html#work">← Work</a>
+        <div class="proj-hero-head">
+            <span class="proj-index" id="proj-index"></span>
+            <h1 class="proj-title" id="proj-title"></h1>
+            <div class="proj-meta" id="proj-meta"></div>
+        </div>
+    </section>
+
+    <section class="proj-media-wrap">
+        <div class="placeholder-media proj-media-main" id="proj-media-main">
+            <span class="ph-icon">▢</span>
+            <span class="ph-label">Image placeholder — set <code>image</code> in content.js</span>
+        </div>
+    </section>
+
+    <section class="proj-body">
+        <p class="proj-description" id="proj-description"></p>
+        <div class="proj-links" id="proj-links"></div>
+    </section>
+
+    <section class="proj-gallery" id="proj-gallery"><!-- injected --></section>
+
+    <nav class="proj-pager" id="proj-pager"><!-- injected --></nav>
+</main>
+
+<footer class="site-footer">
+    <span id="footer-name"></span>
+    <span class="footer-meta">Built with HTML, CSS &amp; a little JS · <span id="footer-year"></span></span>
+</footer>
+
+<script src="js/content.js"></script>
+<script src="js/project.js"></script>
+</body>
+</html>
