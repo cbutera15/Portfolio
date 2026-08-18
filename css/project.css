@@ -91,6 +91,11 @@
 }
 .placeholder-media.is-embed .ph-icon::before { content: "▶"; }
 
+.proj-media-main.has-embed {
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+}
+
 .proj-media-wrap {
   max-width: var(--max);
   margin: 0 auto;
@@ -106,11 +111,13 @@
   object-fit: cover;
   border-radius: 4px;
 }
-/*.proj-media-main iframe {*/
-/*  inset: -14px;                    !* was -8px — increase this *!*/
-/*  width: calc(100% + 28px);        !* keep double the inset value *!*/
-/*  height: calc(100% + 28px);*/
-/*}*/
+
+.proj-media-main iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
 
 /* ---- body / description ---- */
 .proj-body {

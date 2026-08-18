@@ -33,26 +33,35 @@ const SITE = {
     {
       index: "01",
       title: "AI Automation Study",
-      blurb: "A case study exploring the ways that AI workflows can automate tasks that would normally be time consuming," +
+      blurb: "A case study exploring the ways that AI workflows can automate tasks that would normally be time consuming, " +
           "tedious, or challenging.",
       tags: ["AI Automation", "n8n", "2025"],
       href: "#",
       details: [
-        "The brief started with a specific problem: the design and engineering teams had different mental models for motion, so every animated interaction shipped slightly differently. Kinetic became the shared reference for both sides.",
-        "I built the components in code first, documented timing curves and usage rules, then worked backward into Figma so designers could prototype with the same values engineers would ship with.",
+        "This project was a semester long independent study conducted with 4 teammates including myself. We examined how AI integration can automate tasks and increase efficiency.",
+        "Following an extensive online course, we learned about n8n, RAG chatbots, and tokenization among other concepts. The study culminated in a final project using all of the concepts we had learned. Demo link: <a href='https://uvm-ticket-system.vercel.app' target=\"_blank\" rel=\"noopener noreferrer\">https://uvm-ticket-system.vercel.app</a>",
       ],
       embed: '<iframe src=\"https://docs.google.com/presentation/d/e/2PACX-1vTpfACeFX8IrDjWa3YOALFS8X9MWmHgaon0yLPhYv-bOF5tPOK6VfnEE_2txlTn88wBTIXtYG9GRiHJ/pubembed?start=true&loop=true&delayms=5000\" frameborder=\"0\" width=\"960\" height=\"569\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>',
       gallery: [
-        { image: "assets/images/proj1/n8n-scraper.png", caption: "n8n web scraper - gathers and categorizes UVM Knowledge Base articles for use with a RAG chatbot." },
-        { image: "assets/images/proj1/n8n-plaid.png", caption: "n8n plaid integration - gathers and categorizes user transactions automatically." },
+        { image: "assets/images/proj1/n8n-scraper.png", caption: "<strong>n8n web scraper</strong> - gathers and categorizes UVM Knowledge Base articles for use with a RAG chatbot." },
+        { image: "assets/images/proj1/n8n-plaid.png", caption: "<strong>n8n plaid integration</strong> - gathers and categorizes user transactions automatically." },
       ],
     },
     {
       index: "02",
       title: "YMCA Mobile Application",
-      blurb: "A usability-centered redesign of the Greater Burlington YMCA Mobile Application, built using Figma.",
+      blurb: "A usability-centered redesign of the Greater Burlington YMCA mobile and web applications, built using Figma.",
       tags: ["Figma", "UI/UX Design", "2026"],
       href: "#",
+      details: [
+        "My teammate Hanalei Henderson and I spent the semester redesigning the GBYMCA mobile and web applications. Our focus was on usability and user experience. The goal was to improve on the existing application which users noted to be confusing to use and has many unnecessary features.",
+        "We built the application around our direct user testing and general usability design principles. Our finalized prototype includes only necessary features with an emphasis on usability and ease of access. The live web prototype is embedded above.",
+      ],
+      embed: '<iframe src="https://salsa-slaw-57157061.figma.site" title="Live site preview" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>',
+      gallery: [
+        { image: "assets/images/proj2/design-alternatives.png", caption: "<strong>Mobile application design alternatives</strong> - wireframe designs we explored during the research phase before reaching the final project." },
+        { image: "assets/images/proj2/design-explanation.png", caption: "<strong>Design explanation</strong> - A look inside the thought process that informed our final design" },
+      ],
     },
     {
       index: "03",
