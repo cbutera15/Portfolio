@@ -41,7 +41,7 @@ const SITE = {
         "This project was a semester long independent study conducted with 4 teammates including myself. We examined how AI integration can automate tasks and increase efficiency.",
         "Following an extensive online course, we learned about n8n, RAG chatbots, and tokenization among other concepts. The study culminated in a final project using all of the concepts we had learned. Demo link: <a href='https://uvm-ticket-system.vercel.app' target=\"_blank\" rel=\"noopener noreferrer\">https://uvm-ticket-system.vercel.app</a>",
       ],
-      embed: '<iframe src=\"https://docs.google.com/presentation/d/e/2PACX-1vTpfACeFX8IrDjWa3YOALFS8X9MWmHgaon0yLPhYv-bOF5tPOK6VfnEE_2txlTn88wBTIXtYG9GRiHJ/pubembed?start=true&loop=true&delayms=5000\" frameborder=\"0\" width=\"960\" height=\"569\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>',
+      embed: '<iframe src=\"https://docs.google.com/presentation/d/e/2PACX-1vTpfACeFX8IrDjWa3YOALFS8X9MWmHgaon0yLPhYv-bOF5tPOK6VfnEE_2txlTn88wBTIXtYG9GRiHJ/pubembed?start=true&loop=true&delayms=5000\" width=\"960\" height=\"569\"></iframe>',
       gallery: [
         { image: "assets/images/proj1/telegram-agent.png", caption: "<strong>n8n telegram agent</strong> - connects RAG agent to telegram to allow user to make gmail actions conversationally." },
         { image: "assets/images/proj1/n8n-plaid.png", caption: "<strong>n8n plaid integration</strong> - gathers and categorizes user transactions automatically." },
@@ -73,7 +73,7 @@ const SITE = {
           "COOK! is a mobile application that allows users to create and save recipes. Our team of four created an app with a focus on usability and a clean, modern design. We sought to create an application that would be actually useful to everyday life for this project. ",
           "The application is coded in Swift and is designed to be used on iOS devices. It features an AI recipe creation tool, food item barcode scanner, and a saved recipe database for users to access their favorites.",
       ],
-      embed: '<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRGFQSkLJeqsFe7aa6e1oC1GwASla1pdbmuwgvmosc7HvRmrXylbERV283iIxgIK2kD_rfTuFPOEk-5/pubembed?start=true&loop=true&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>',
+      embed: '<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRGFQSkLJeqsFe7aa6e1oC1GwASla1pdbmuwgvmosc7HvRmrXylbERV283iIxgIK2kD_rfTuFPOEk-5/pubembed?start=true&loop=true&delayms=5000" width="960" height="569"></iframe>',
     },
     {
       index: "04",
