@@ -323,6 +323,8 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 .video-card {
   background: var(--bg);
   padding: 24px;
+  width: 100%;
+  text-align: left;
   transition: background 0.3s var(--ease);
 }
 .video-card:hover { background: color-mix(in srgb, var(--ink) 4%, transparent); }
@@ -342,6 +344,73 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
   color: var(--muted);
   line-height: 1.5;
 }
+.video-card .v-play {
+  display: block;
+  margin-top: 28px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.video-modal[hidden] { display: none; }
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: var(--pad);
+}
+.video-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 22, 26, 0.78);
+  backdrop-filter: blur(5px);
+}
+.video-modal-panel {
+  position: relative;
+  width: fit-content;
+  max-width: min(100%, 1000px);
+  padding: clamp(18px, 3vw, 30px);
+  background: var(--bg);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+}
+.video-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.video-modal-head h2 {
+  font-family: var(--serif);
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 500;
+}
+.video-modal-close {
+  color: var(--muted);
+  font-size: 32px;
+  line-height: 1;
+}
+.video-modal-close:hover { color: var(--ink); }
+.video-modal-player {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 75vh;
+  margin: 0 auto;
+  background: var(--bg-panel);
+  object-fit: contain;
+}
+.video-modal-message {
+  padding: 36px 0;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+body.video-modal-open { overflow: hidden; }
 
 /* ============================================================
    ABOUT

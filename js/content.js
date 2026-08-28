@@ -114,19 +114,19 @@ const SITE = {
       title: "Banff Trip",
       blurb: "Trip montage from a recent ski trip.",
       year: "Winter 2025",
-      href: "#",
+      src: "assets/videos/banff-trip.mov",
     },
     {
       title: "Summer Edit",
       blurb: "A visual representation of my summer. All shot on iPhone.",
       year: "Summer 2025",
-      href: "#",
+      src: "assets/videos/summer-edit.mp4",
     },
     {
       title: "Steamboat Trip",
       blurb: "Video montage covering my time in Steamboat Springs.",
       year: "Spring 2025",
-      href: "#",
+      src: "assets/videos/steamboat-trip.mov",
     },
   ],
 };
