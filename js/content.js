@@ -18,11 +18,11 @@ const SITE = {
   terminalLines: [
     { cmd: "whoami", out: "Colin Butera — Coder, UX/UI Designer, Videographer" },
     { cmd: "skills --list", out: "Front-end Design · Backend Code · Video Production · Music Curation" },
-    { cmd: "status", out: "Open for work and collaboration." },
+    { cmd: "status", out: "Open for work and collaboration. Website under construction!" },
   ],
 
   about:
-    "I specialize in front-end web and application design and code, which means the pixels and the logic get made by " +
+    "I specialize in front-end web/application design and code, which means the pixels and the logic get made by " +
       "the same hands. With experience in languages like HTML/CSS and Swift, I've built a number of projects throughout my " +
       "educational years. Proficiency in programs like Figma and Claude help to speed up my workflow and prioritize " +
       "efficiency without losing my personal touch. In my free time, you'll find me in the mountains.",
@@ -43,7 +43,7 @@ const SITE = {
       ],
       embed: '<iframe src=\"https://docs.google.com/presentation/d/e/2PACX-1vTpfACeFX8IrDjWa3YOALFS8X9MWmHgaon0yLPhYv-bOF5tPOK6VfnEE_2txlTn88wBTIXtYG9GRiHJ/pubembed?start=true&loop=true&delayms=5000\" frameborder=\"0\" width=\"960\" height=\"569\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>',
       gallery: [
-        { image: "assets/images/proj1/n8n-scraper.png", caption: "<strong>n8n web scraper</strong> - gathers and categorizes UVM Knowledge Base articles for use with a RAG chatbot." },
+        { image: "assets/images/proj1/telegram-agent.png", caption: "<strong>n8n telegram agent</strong> - connects RAG agent to telegram to allow user to make gmail actions conversationally." },
         { image: "assets/images/proj1/n8n-plaid.png", caption: "<strong>n8n plaid integration</strong> - gathers and categorizes user transactions automatically." },
       ],
     },
@@ -69,14 +69,28 @@ const SITE = {
       blurb: "A ground up iOS application allowing users to create and save recipes intelligently coded in Swift.",
       tags: ["Swift", "iOS", "2025"],
       href: "#",
+      details: [
+          "COOK! is a mobile application that allows users to create and save recipes. Our team of four created an app with a focus on usability and a clean, modern design. We sought to create an application that would be actually useful to everyday life for this project. ",
+          "The application is coded in Swift and is designed to be used on iOS devices. It features an AI recipe creation tool, food item barcode scanner, and a saved recipe database for users to access their favorites.",
+      ],
+      embed: '<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRGFQSkLJeqsFe7aa6e1oC1GwASla1pdbmuwgvmosc7HvRmrXylbERV283iIxgIK2kD_rfTuFPOEk-5/pubembed?start=true&loop=true&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>',
     },
     {
       index: "04",
       title: "UVM-Ticketing-System",
-      blurb: "A web application meant to replace the ticketing system of the UVM Tech Team using AI Automation with n8n" +
+      blurb: "A web application meant to replace the ticketing system of the UVM Tech Team using AI Automation with n8n " +
           "to streamline support workflows.",
       tags: ["n8n", "Web", "2025"],
       href: "#",
+      details: [
+          "The UVM-Ticketing-System is a web application that replaces the existing ticketing system of the UVM Tech Team. It uses AI Automation with n8n to streamline support workflows and improve efficiency.",
+          "The application is built on a modern web stack and features a user-friendly interface that makes it easy for users to submit and track tickets. A RAG chatbot is integrated into the system to provide users with instant and relevant support and answers to common questions.",
+      ],
+      embed: '<iframe src="https://uvm-ticket-system.vercel.app" title="Live site preview" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>',
+      gallery: [
+        { image: "assets/images/proj4/RAG-bot-workflow.png", caption: "<strong>RAG Bot workflow</strong> - n8n backend for the RAG chatbot and its Pinecone connection." },
+        { image: "assets/images/proj4/n8n-scraper.png", caption: "<strong>n8n webscraper</strong> - A web scraper built with n8n to gather data from the UVM Knowledge Base for use with a RAG chatbot." },
+      ],
     },
     {
       index: "05",
@@ -84,6 +98,12 @@ const SITE = {
       blurb: "A full website overhaul for The Simmering Bone, a small broth company in Burlington, Vermont.",
       tags: ["HTML/CSS", "GSAP", "2025"],
       href: "#",
+      details: [
+          "This website project was a full overhaul of the existing website for The Simmering Bone, a small broth company in Burlington, Vermont. The goal of my teammate Ben Quackenbush and I was to create a modern, responsive website that would better showcase the company's products and brand. He focused on the market functionality of the site while I focused on the design and animations.",
+          "The website is built using HTML/CSS and GSAP for animations. The site features a clean, modern design that is easy to navigate and visually appealing.    <strong>Note: while the website is embedded above, some functionality, especially animation spacing and videos and are limited due to the iframe and GitHub pages hosting environment.</strong>",
+          "",
+      ],
+      embed: '<iframe src="https://cbutera15.github.io/TSB-Website/html" title="Live site preview" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>',
     },
   ],
 
