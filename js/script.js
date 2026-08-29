@@ -1,6 +1,8 @@
 /* ============================================================
    RENDER CONTENT FROM content.js
    ============================================================ */
+let openVideoPlayer;
+
 (function render() {
   document.title = `${SITE.name} — ${SITE.role}`;
 
@@ -28,14 +30,17 @@
   // Videos
   const vlist = document.getElementById("video-list");
   SITE.videos.forEach((v) => {
-    const card = document.createElement("a");
-    card.href = v.href;
+    const card = document.createElement("button");
+    card.type = "button";
     card.className = "video-card reveal";
+    card.setAttribute("aria-label", `Play ${v.title}`);
     card.innerHTML = `
       <span class="v-year">${v.year}</span>
       <div class="v-title">${v.title}</div>
       <div class="v-blurb">${v.blurb}</div>
+      <span class="v-play" aria-hidden="true">Play video ↗</span>
     `;
+    card.addEventListener("click", () => openVideoPlayer(v));
     vlist.appendChild(card);
   });
 
@@ -59,6 +64,68 @@
 
   document.getElementById("footer-name").textContent = `${SITE.name} — ${SITE.role}`;
   document.getElementById("footer-year").textContent = new Date().getFullYear();
+})();
+
+/* ============================================================
+   VIDEO POPOUT PLAYER
+   ============================================================ */
+(function videoPlayer() {
+  const modal = document.createElement("div");
+  modal.className = "video-modal";
+  modal.hidden = true;
+  modal.innerHTML = `
+    <div class="video-modal-backdrop" data-video-close></div>
+    <div class="video-modal-panel" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+      <div class="video-modal-head">
+        <h2 id="video-modal-title"></h2>
+        <button class="video-modal-close" type="button" aria-label="Close video">×</button>
+      </div>
+      <video class="video-modal-player" controls playsinline></video>
+      <p class="video-modal-message" hidden></p>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const player = modal.querySelector(".video-modal-player");
+  const title = modal.querySelector("#video-modal-title");
+  const message = modal.querySelector(".video-modal-message");
+  const closeButton = modal.querySelector(".video-modal-close");
+  let lastFocusedElement;
+
+  openVideoPlayer = (video) => {
+    lastFocusedElement = document.activeElement;
+    title.textContent = video.title;
+    message.hidden = true;
+    player.hidden = false;
+    player.src = video.src;
+    player.load();
+    modal.hidden = false;
+    document.body.classList.add("video-modal-open");
+    closeButton.focus();
+    player.play().catch(() => {});
+  };
+
+  const close = () => {
+    player.pause();
+    player.removeAttribute("src");
+    player.load();
+    modal.hidden = true;
+    document.body.classList.remove("video-modal-open");
+    if (lastFocusedElement instanceof HTMLElement) lastFocusedElement.focus();
+  };
+
+  player.addEventListener("error", () => {
+    player.hidden = true;
+    message.textContent = "Add this video file to the source path in js/content.js to play it.";
+    message.hidden = false;
+  });
+  closeButton.addEventListener("click", close);
+  modal.addEventListener("click", (event) => {
+    if (event.target instanceof HTMLElement && event.target.hasAttribute("data-video-close")) close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) close();
+  });
 })();
 
 /* ============================================================
